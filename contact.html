@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+        body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 5px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+sub{
+    font-size: 20px;
+    color:grey;
+}
+p1{
+    font-size: 30px;
+}
+p2{
+    color: grey;
+    font-size: 20px;
+}
+p3{
+    font-size: 30px;
+}
+p4{
+    font-size: 20px;
+}
+p5{
+    font-size: 30px;
+}
+p6{
+    font-size: 20px;
+}
+p7{
+    font-size: 18px;
+    color: grey;
+}
+th{
+    text-align: left;
+}
+table{
+    border-collapse: collapse;
+  width: 100%;
+}
+</style>
+        </head>
+        <body>
+                <div class="header">
+                      <i>  <h5> Hello Intern <sub> A place of Internshps</sub></h5></i>
+                      </div>
+                      
+                      <div id="navbar">
+                        <a class="" href="project2.html">Home</a>
+                        <a class=""href="login.html">Login</a>
+                        <a class="active"href="contact.html">Contact</a>
+     
+                      </div>
+                      <script>
+                            window.onscroll = function() {myFunction()};
+                            
+                            var navbar = document.getElementById("navbar");
+                            var sticky = navbar.offsetTop;
+                            
+                            function myFunction() {
+                              if (window.pageYOffset >= sticky) {
+                                navbar.classList.add("sticky")
+                              } else {
+                                navbar.classList.remove("sticky");
+                              }
+                            }
+                           </script><br><br>
+                           <p1> We'd love to hear from you!
+                            </p1><br>
+                            <p2>If you need assistance or have queries/suggestions related to internships or the website, feel free to contact us right away! We will get back to you shortly. For other queries, you can refer to our complete FAQ section.</p2>
+
+<br><br>
+<p3> Email Us</p3><br><br>
+<p4>General:&nbsp;&nbsp;
+        info@hellointern.com <br>
+        
+        Global Internship Program:&nbsp;&nbsp;
+        gip@hellointern.com <br>
+        
+        Partnerships and Media:&nbsp;&nbsp;
+        info@hellointern.com <br>
+        
+        Singapore:&nbsp;&nbsp;
+        singapore@hellointern.com <br>
+        
+        USA:&nbsp;&nbsp;
+        usa@hellointern.com
+        </p4><hr>
+<center><p5>Our Offices</p5><br></center><br><table>
+<th><p6>INDIA</p6></th>
+<th>
+        <p6>Singapore</p6>
+
+</th>
+<th><p6>USA </p6></th>
+<tr><td>
+<p7>
+       Plot No 35, Navodaya Colony, <br>
+        Road No 2, Banjara Hills, <br>
+        Hyderabad - 500 034 <br>
+        Telangana - India.<br>
+        Phone<br>
+        +91-40-49492040<br>
+        +91-40-49492000
+        </p7><br><br></td>
+<td>
+
+<p7>160 Robinson Road #17-01,
+        SBF Center,<br>
+        Singapore - 068914.
+        </p7></td><td>
+<br><p7>608 Sunnybrook Drive
+        Brentwood, TN 37027<br>
+        Tel<br>
+        +1 615 823 9907
+        </p7></td>
+</tr>
+</table>
+<br><br><hr>
+
+
+
+                        </body>
+</html>

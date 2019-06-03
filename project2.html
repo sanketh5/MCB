@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+        body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 5px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+sub{
+    font-size: 20px;
+    color:grey;
+}
+.button {
+  background-color:black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position:absolute;
+}
+h5{
+    font-size: 45px;
+}
+p1{
+    width:500px;
+   height:150px;
+   font-size: 20px;
+   color: grey;
+  }
+h4{
+    font-size: 35px;
+    color:black;
+}
+table,td{
+ padding-right: 100px;
+
+}
+* {
+  box-sizing: border-box;
+}
+h1{
+    font-size: 30px;
+}
+h2{
+    font-size: 25px;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+}
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #444;
+  color: white;
+}
+
+.fa {font-size:50px;}
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+p0{
+  color: black;
+  font-size: 20px;
+}
+p8{
+  color:grey;
+  font-size: 20px;
+}
+t1{
+  font-size: 20px;
+}
+t2{
+  font-size: 20px;
+  color:grey;
+}
+p{
+  font-size: 20px;
+}
+t3{
+  text-align: center;
+  font-size: 30px;
+}
+
+
+        </style>
+        </head>
+        <body>
+                <div class="header">
+                      <i>  <h5> Hello Intern <sub> A place of Internshps</sub></h5></i>
+                      </div>
+                      
+                      <div id="navbar">
+                        <a class="active" href="javascript:void(0)">Home</a>
+                        <a class=""href="login.html">Login</a>
+                        <a class=""href="contact.html">Contact</a>
+     
+                      </div>
+                      <script>
+                            window.onscroll = function() {myFunction()};
+                            
+                            var navbar = document.getElementById("navbar");
+                            var sticky = navbar.offsetTop;
+                            
+                            function myFunction() {
+                              if (window.pageYOffset >= sticky) {
+                                navbar.classList.add("sticky")
+                              } else {
+                                navbar.classList.remove("sticky");
+                              }
+                            }
+                           </script>
+                       <center><img src="http://littleyouknow.com/wp-content/uploads/2018/06/iStock-498861460.jpg" width="80%"></center>
+                       <h5> The best Oppurtunities are here.
+                           
+                           What are you waiting for?
+                       </h5>
+  <a href="login.html" class="button">Get Started</a><br><br><hr>
+
+  <table>
+        <tr>
+            <td>
+                    <h4>Introducing Missions - a brand new way for students to make money</h4>
+                    <p1>Join Missions from your favourite companies and complete fun, simple and exciting tasks to get rewarded.</p1>
+      <center><a href="login.html" class="button">Get Started</a></center>
+            </td>
+            <td>
+                    <img src="http://www.letsintern.com/blog/wp-content/uploads/2016/12/4.1.jpg" width="550px"height="450px">
+            </td>
+        </tr>
+        <tr>
+                <td>
+                        <img src="https://cdn-images-1.medium.com/max/1600/1*3YA_WGF2WnNZhkd9gJf3qA.jpeg" width="550px"height="450px">
+                </td>
+                <td>
+                        <h4>Join  and explore a world of opportunities</h4>
+                        <p1>Apply for an internship or join a mission to earn cash, rewards and certificates..</p1>
+          <center><a href="login.html" class="button">Get Started</a></center>
+                </td>
+                
+            </tr>
+            <tr>
+                    <td>
+                            <h4>
+                                    Find the best internship opportunities throughout the year</h4>
+                            <p1>Kickstart your career with an internship via Hello Intern! 
+                                    Find and apply for internships from leading companies and startups. Work from home, campus or office based on what suits you..</p1>
+              <center><a href="login.html" class="button">Get Started</a></center>
+                    </td>
+                    <td>
+                            <img src="https://thumbs.dreamstime.com/z/internship-concept-business-doodle-design-style-online-internship-concept-business-doodle-design-style-online-101035349.jpg" width="550px"height="300px">
+                    </td>
+                </tr>
+             
+                    
+    </table><br><br>
+
+    <hr>
+    <i><h1>We Provide..</i></h1>
+<br>
+ <table>
+   <tr>
+     <th>
+       <p2> <i class="fa fa-laptop" style="font-size:40px;color:black;"></i></p2>
+     </th>
+     <th><p2> <i class="fa fa-laptop" style="font-size:40px;color:black;"></i></th></p2>
+     <th><p2> <i class="fa fa-laptop" style="font-size:40px;color:black;"></i></th></p2>
+   
+   </tr>
+   <tr>
+     <th>
+        <h2> Paid Internships</h2>
+     </th>
+     <th><h2> Summer Internships</h2></th>
+     <th><h2> Non Profit Internships</h2></th>
+   </tr>
+   <tr>
+     <th>
+      <p1> Paid internships exist primarily in the private sector or in large organizations that have the money to pay students to learn while they work. Given a choice of paid or unpaid internship, paid internships are definitely the internships of choice.More and more organizations are recognizing the value of internship programs and the enormous benefit they play in the recruitment process. 
+    </p1> </th>
+     <th>
+      <p1>Summer internships are usually eight to twelve weeks long and can be full or part-time. More students do internships during the summer than during any other time of the year. These short-term experiences provide a real insight into what it’s actually like working in a particular job or career field. There’s ample time to get into a regular work routine and gain valuable knowledge and skills.
+     </p1> </th>
+      <th>
+       <p1>Doing an internship for a nonprofit organization is usually quite different than working in an organization for profit. In a nonprofit organization, there are no stockholders and no one shares in the annual profits or losses that are determined by the organization each year. Nonprofit organizations include charities, universities, government agencies, religious organizations, and some hospitals.
+       </p1> </th>
+
+   </tr>
+ </table><br><br>
+ <table>
+        <tr>
+          <th>
+            <p2> <i class="fa fa-laptop" style="font-size:40px;color:black;"></i></p2>
+          </th>
+          <th><p2> <i class="fa fa-laptop" style="font-size:40px;color:black;"></i></th></p2>
+          <th><p2> <i class="fa fa-laptop" style="font-size:40px;color:black;"></i></th></p2>
+        
+        </tr>
+        <tr>
+          <th>
+             <h2> Internships For Credit</h2>
+          </th>
+          <th><h2> Service Learning</h2></th>
+          <th><h2> Co-Operative Eduation</h2></th>
+        </tr>
+        <tr>
+          <th>
+           <p1> Internships for credit require that the experience is strongly related to an academic discipline to be deemed “credit-worthy”. The main question is determining the value of the internship experience in a higher education context. Internships that are primarily clerical or mechanical do not qualify for academic credit.
+         </p1> </th>
+          <th>
+           <p1> Although there are different perspectives on what constitutes services learning, there are several specific criteria that must be met for an experience to be considered a service learning experience. Service learning requires a combination of meeting specific learning objectives by completing some type of community service work.
+          </p1> </th>
+           <th>
+            <p1>  The main difference between an internship and a co-op experience is the length of time. While internships generally last anywhere’s from a few weeks to several months, co-op’s normally last one or more years. Usually, students will attend classes and work on their co-op simultaneously or they may do their co-op during winter and/or summer breaks
+            </p1> </th>
+     
+        </tr>
+      </table><br>
+      <hr>
+      <center><h1> Our Internships List</h1></center>
+     <table >
+  <th>
+    Posted
+  </th>
+  <th>
+    Internship Name/salary
+  </th>
+  <th> 
+     Company Name/Location
+  </th>
+  <th>
+
+  </th>
+  <tr>
+    <td>
+    <p>03 june 2019
+    
+    </p>
+    </td>
+    <td>
+      <p0> Software Support Engineer <br> </p0><p8>25000 per month</p8>
+    </td>
+    <td>
+      <t1> Sansoft Info Tech </t1><br> <t2> Chennai,India</t2>
+    </td>
+    <td><a href="https://www.hellointern.com/internships/9a9840706a3b32784aa3e066537f8120" class="button">view</a> </td>
+    </tr>
+    <tr>
+        <td>
+        <p>02 june 2019
+        
+        </p>
+        </td>
+        <td>
+          <p0> Interior Designer <br>  </p0><p8> 2000 per month</p8>
+        </td>
+        <td>
+          <t1> Cake Fite </t1><br> <t2> Kolkata,India</t2>
+        </td>
+        <td><a href="https://www.hellointern.com/internships/5450ad1e34f89ffcf9a3e9ca5996d40d" class="button">view</a> </td>
+        </tr>
+        <tr>
+            <td>
+            <p>02 june 2019
+            
+            </p>
+            </td>
+            <td>
+              <p0> International Hotels-Corporate sales <br></p0><p8> 9000 per month</p0>
+            </td>
+            <td>
+              <t1> Elite Celebrations </t1><br> <t2> Pune,India</t2>
+            </td>
+            <td><a href="https://www.hellointern.com/internships/b3803d0bd0a8d5157feaa4f441d01944" class="button">view</a> </td>
+            </tr>
+            <tr>
+                <td>
+                <p>01 june 2019
+                
+                </p>
+                </td>
+                <td>
+                  <p0> Social Media Marketing <br>  </p0><p8> 7000 per month</p8>
+                </td>
+                <td>
+                  <t1> Chef Payal Gupta FoodStyling </t1><br> <t2> Mumbai,India</t2>
+                </td>
+                <td><a href="https://www.hellointern.com/internships/b3803d0bd0a8d5157feaa4f441d01944" class="button">view</a> </td>
+                </tr>
+                <tr>
+                    <td>
+                    <p>01 june 2019
+                    
+                    </p>
+                    </td>
+                    <td>
+                      <p0> Law Intern <br>  </p0><p8> Unpaid</p8>
+                    </td>
+                    <td>
+                      <t1> Biswajit Sarkar Advocates-IP Attorneys </t1><br> <t2> Kolkata,India</t2>
+                    </td>
+                    <td><a href="https://www.hellointern.com/internships/de60afc42d6043e89edb967915a951b6" class="button">view</a> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p>01 june 2019
+                        
+                        </p>
+                        </td>
+                        <td>
+                          <p0> HR Intern <br>   </p0><p8>3000 per month</p8>
+                        </td>
+                        <td>
+                          <t1> Study Cafe </t1><br> <t2> Faridabad,India</t2>
+                        </td>
+                        <td><a href="https://www.hellointern.com/internships/838fbd9967958420de6e372d10b80ddd" class="button">view</a> </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <p>01 june 2019
+                            
+                            </p>
+                            </td>
+                            <td>
+                              <p0> Business Developer <br>  </p0><p8> 2000 per month</p8>
+                            </td>
+                            <td>
+                              <t1> Event Ustaad </t1><br> <t2> Mumbai,India</t2>
+                            </td>
+                            <td><a href="https://www.hellointern.com/internships/6ed2f7437be88e140f6d031bc2ad0972" class="button">view</a> </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <p>01 june 2019
+                                
+                                </p>
+                                </td>
+                                <td>
+                                  <p0> Social Media Intern <br>   </p0><p8>2000 per month</p8>
+                                </td>
+                                <td>
+                                  <t1> Event Ustaad </t1><br> <t2> Mumbai,India</t2>
+                                </td>
+                                <td><a href="https://www.hellointern.com/internships/16fd1ab593fd30a58e9e5b30342a7b35" class="button">view</a> </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <p>01june 2019
+                                    
+                                    </p>
+                                    </td>
+                                    <td>
+                                      <p0> Content Writer <br>  </p0><p8> 2000 per month</p8>
+                                    </td>
+                                    <td>
+                                      <t1> Event Ustaad </t1><br> <t2> Mumbai,India</t2>
+                                    </td>
+                                    <td><a href="https://www.hellointern.com/internships/061bcbad0532532cd39bf24449a02431" class="button">view</a> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                    
+                                        
+                                        <tr>
+                                        <td>
+                                            <p>01 june 2019
+                                            
+                                            </p>
+                                            </td>
+                                            <td>
+                                              <p0> Sales and Media Marketing <br>  </p0><p8>5000 per month</p8>
+                                            </td>
+                                            <td>
+                                              <t1>Smart Markerz </t1><br> <t2> Gurgaon,India</t2>
+                                            </td>
+                                            <td><a href="https://www.hellointern.com/internships/8592fa477372c07a74b85d4a22c138cf" class="button">view</a> </td>
+                                            </tr>
+                                                                                                                                                                                                                        
+</table><br><br><hr>
+<center><h2> Our Achievements</h2></center><br>
+      <div class="row">
+            <div class="column">
+              <div class="card">
+                <p><i class="fa fa-user"></i></p>
+                <h3>50+</h3>
+                <p>Partners</p>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <p><i class="fa fa-check"></i></p>
+                <h3>100+</h3>
+                <p>Projects</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <p><i class="fa fa-smile-o"></i></p>
+                <h3>1000+</h3>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <p><i class="fa fa-coffee"></i></p>
+                <h3>10000+</h3>
+                <p>Meetings</p>
+              </div>
+            </div>
+          </div><br>
+          <hr>
+
+<center><h2> Reviews given by Interns</h2></center><br>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+        <!-- Full-width slides/quotes -->
+        <div class="mySlides">
+          <q>My internship at as a student partner helped me in opening the wide opportunities to my friends as well as others in my society.Internshala also provided trainings which students like me would profit from.</q>
+          <p class="author">- Internship/Volunteer (Former Employee) –  Thiruvananthapuram – July 13, 2018</p>
+        </div>
+      
+        <div class="mySlides">
+          <q>I get motivated for conducting the seminars and promote people to join the Internshala. I had increased well my professional talking skill and interpersonal skills..</q>
+          <p class="author">- Campus Ambassador (Former Employee) –  Lucknow– February 25, 2019</p>
+        </div>
+      
+        <div class="mySlides">
+          <q>Great place for students to seek Internships.
+                Help students for there future. Nice job. I encourge the work. Every one should apply for Internships it's nice way to learn.</q>
+          <p class="author">- Campus Ambassador (Former Employee) –  Mumbai – April 20, 2018</p>
+        </div>
+      
+        <div class="mySlides">
+                <q>I learn my things from this internship from my time management skills to presentation skills. It was very exciting to work with the educated staff also.</q>
+                <p class="author">- Internshala Student Partner (Former Employee) –   Haryana – December 22, 2017</p>
+              </div>
+        <!-- Next/prev buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      
+      <!-- Dots/bullets/indicators -->
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+      </div>
+      <script>
+      var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>        
+
+        </body>
+        </html>

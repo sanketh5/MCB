@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+        body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 5px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+sub{
+    font-size: 20px;
+    color:grey;
+}
+.button {
+  background-color:black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position:absolute;
+}
+</style>
+        </head>
+        <body>
+                <div class="header">
+                      <i>  <h5> Hello Intern <sub> A place of Internshps</sub></h5></i>
+                      </div>
+                      
+                      <div id="navbar">
+                        <a class="" href="project2.html">Home</a>
+                        <a class="active"href="#">Login</a>
+                        <a class=""href="contact.html">Contact</a>
+     
+                      </div>
+                      <script>
+                            window.onscroll = function() {myFunction()};
+                            
+                            var navbar = document.getElementById("navbar");
+                            var sticky = navbar.offsetTop;
+                            
+                            function myFunction() {
+                              if (window.pageYOffset >= sticky) {
+                                navbar.classList.add("sticky")
+                              } else {
+                                navbar.classList.remove("sticky");
+                              }
+                            }
+                           </script>
+                               <center><h1> Login Form</h1></center>
+   
+                               <table>
+                                   <tr>
+                                       <td> First Name:
+                               
+                                       </td>
+                                       <td>
+                                           <input type="text">
+                                       </td>
+                               
+                               </tr>
+                               <tr>
+                               <td> Last Name:
+                               
+                               </td>
+                               <td>
+                                   <input type="text">
+                               </td>
+                               
+                               </tr>
+                               <tr>
+                               <td> Date of Birth:
+                               
+                               </td>
+                               <td>
+                               
+                                   <input type="date">
+                               </td>
+                               
+                               </tr>
+                               <tr>
+                               <td> Email:
+                               
+                               </td>
+                               <td>
+                                   <input type="email">
+                               </td>
+                               
+                               </tr>
+                               <tr>
+                                 <td>
+                                   Phone Number:
+                                 </td>
+                                 <td>
+                                   <input type="text">
+                                 </td>
+                               </tr>
+                               <tr>
+                               <td> Gender:
+                               
+                               </td>
+                               <tr>
+                               <td>
+                                   <input type="radio" name="gender" value="Male">Male <input type="radio" name="gender" value="Female">Female
+                               </td>
+                               
+                               </tr>
+                               <tr>
+                               <tr></tr>
+                               <td> Package you want:
+                               
+                               </td>
+                               <tr>
+                               <td>
+                                   <input type="checkbox" name="language" value="C">1 month
+                               </tr>
+                               <tr
+                               ><td> 
+                                   <input type="checkbox" name="language" value="c++">3months
+                               </td>
+                               </tr>
+                               <tr> 
+                               <td>
+                               <input type="checkbox" name="language" value="Java">6months
+                               </td>
+                               
+                               </tr>
+                               
+                               </table>                    
+                               
+                               <center><a href="thanking page.html" class="button">Explore</a></center>
+                               
+                               
+                                   
+        </body>
+        </html>
